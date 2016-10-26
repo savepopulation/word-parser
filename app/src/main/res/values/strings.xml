@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ContentParser</string>
+
+    <!-- Button Texts -->
+    <string name="button_support">Go!!!</string>
+
+    <!-- Titles -->
+    <string name="title_char">Nth Char:</string>
+    <string name="title_chars">Nth Chars:</string>
+    <string name="title_words">Words And Counts:</string>
+
+</resources>

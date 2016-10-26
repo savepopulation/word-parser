@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_support" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_view_padding">
+
+            <TextView
+                style="@style/TextViewLabel"
+                android:text="@string/title_char" />
+
+            <LinearLayout style="@style/LinearLayoutWrapper">
+
+                <android.support.v4.widget.ContentLoadingProgressBar
+                    android:id="@+id/progressbar_char"
+                    style="@style/DefaultProgressBar"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textview_char"
+                    style="@style/TextViewContent" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextViewLabel"
+                android:text="@string/title_chars" />
+
+            <LinearLayout style="@style/LinearLayoutWrapper">
+
+                <android.support.v4.widget.ContentLoadingProgressBar
+                    android:id="@+id/progressbar_chars"
+                    style="@style/DefaultProgressBar"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textview_chars"
+                    style="@style/TextViewContent" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextViewLabel"
+                android:text="@string/title_words" />
+
+            <LinearLayout style="@style/LinearLayoutWrapper">
+
+                <android.support.v4.widget.ContentLoadingProgressBar
+                    android:id="@+id/progressbar_words"
+                    style="@style/DefaultProgressBar"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textview_words"
+                    style="@style/TextViewContent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
