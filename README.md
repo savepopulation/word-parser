@@ -1,4 +1,4 @@
-# word-finder
+# word-parser
 Finds words in given url's html content. (Example implementation of MVP - Clean Architecture)
 
 Android Architecture:
