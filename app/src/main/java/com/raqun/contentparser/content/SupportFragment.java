@@ -26,22 +26,12 @@ public class SupportFragment extends Fragment implements SupportContract.View, V
     @NonNull
     private SupportContract.Presenter mPresenter;
 
-    @NonNull
     private TextView mTextViewChar;
-
-    @NonNull
     private TextView mTextViewChars;
-
-    @NonNull
     private TextView mTextViewWords;
 
-    @NonNull
     private ProgressBar mProgressBarChar;
-
-    @NonNull
     private ProgressBar mProgressBarChars;
-
-    @NonNull
     private ProgressBar mProgressBarWords;
 
     @NonNull

@@ -2,7 +2,6 @@ package com.raqun.contentparser.content;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 
 import com.raqun.contentparser.api.Constants;
 import com.raqun.contentparser.UseCase;
@@ -10,6 +9,7 @@ import com.raqun.contentparser.UseCaseHandler;
 import com.raqun.contentparser.content.domain.FindCharAtPosition;
 import com.raqun.contentparser.content.domain.FindCharsAtPosition;
 import com.raqun.contentparser.content.domain.FindWordsAndCalculateFrequency;
+import com.raqun.contentparser.util.ValidationUtil;
 
 
 /**
@@ -49,17 +49,17 @@ class SupportPresenter implements SupportContract.Presenter {
     public void subscribe(@NonNull SupportContract.View view) {
         this.mView = view;
 
-        if (!TextUtils.isEmpty(mCharString)) {
+        if (!ValidationUtil.isNullOrEmpty(mCharString)) {
             hideIndicator(SupportFragment.PROGRESSBAR_CHAR);
             showChar(mCharString);
         }
 
-        if (!TextUtils.isEmpty(mCharsString)) {
+        if (!ValidationUtil.isNullOrEmpty(mCharsString)) {
             hideIndicator(SupportFragment.PROGRESSBAR_CHARS);
             showChars(mCharsString);
         }
 
-        if (!TextUtils.isEmpty(mWordsString)) {
+        if (!ValidationUtil.isNullOrEmpty(mWordsString)) {
             hideIndicator(SupportFragment.PROGRESSBAR_WORDS);
             showWords(mWordsString);
         }

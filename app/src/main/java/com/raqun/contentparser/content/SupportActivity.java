@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.raqun.contentparser.R;
 
 
-public class SupportActivity extends AppCompatActivity {
+public final class SupportActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

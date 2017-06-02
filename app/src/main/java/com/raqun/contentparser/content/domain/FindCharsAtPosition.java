@@ -34,7 +34,7 @@ public class FindCharsAtPosition extends UseCase<String> {
             final String content = call.getContent();
             if (!TextUtils.isEmpty(content)) {
                 final StringBuilder stringBuilder = new StringBuilder();
-                int count = content.length() / mPosition;
+                final int count = content.length() / mPosition;
                 for (int i = 1; i <= count; i++) {
                     stringBuilder.append(content.charAt(i * mPosition - 1));
                 }

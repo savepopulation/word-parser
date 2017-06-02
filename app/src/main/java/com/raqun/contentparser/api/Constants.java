@@ -7,6 +7,7 @@ package com.raqun.contentparser.api;
 public final class Constants {
 
     private Constants() {
+        // Empty private constructor
     }
 
     public static final String URL = "https://google.com.tr";

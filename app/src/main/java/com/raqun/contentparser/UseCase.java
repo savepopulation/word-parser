@@ -24,13 +24,11 @@ public abstract class UseCase<T> {
         this.mHandler = new Handler();
     }
 
-    @WorkerThread
     protected abstract void execute();
 
     @NonNull
     protected abstract String getTag();
 
-    @WorkerThread
     protected void publishSuccess(final T response) {
         mHandler.post(new Runnable() {
             @Override
@@ -40,7 +38,6 @@ public abstract class UseCase<T> {
         });
     }
 
-    @WorkerThread
     protected void publishError(final String error) {
         mHandler.post(new Runnable() {
             @Override

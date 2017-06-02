@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.annotation.WorkerThread;
 import android.text.TextUtils;
 
+import com.raqun.contentparser.util.ValidationUtil;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -24,7 +26,7 @@ public final class Call {
     private String mUrl;
 
     public Call(@NonNull String url) {
-        if (TextUtils.isEmpty(url.trim())) {
+        if (ValidationUtil.isNullOrEmpty(url)) {
             throw new IllegalArgumentException("Url cannot be empty or null!");
         }
 
